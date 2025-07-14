@@ -467,15 +467,22 @@ button {
         align-items: center;
         max-width: 90%;
         margin: 0 auto;
-
-        .complaint-header {
-            flex-direction: column;
-            text-align: center;
-        }
-
-        .complaint-header img {
-
-            margin-bottom: 0.5rem;
-        }
     }
+
+    .complaint-header .title {
+        flex-direction: column;
+        text-align: center;
+        margin: auto;
+        font-size: 0.5rem;
+
+    }
+
+    .complaint-header img {
+
+
+        flex-direction: column;
+
+
+    }
+
 }

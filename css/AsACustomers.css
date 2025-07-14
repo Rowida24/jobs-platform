@@ -430,7 +430,7 @@ form .form-group select {
     }
 
     .technician-register-box {
-        max-width: 90%;
+        max-width: 80%;
         padding: 15px;
     }
 
@@ -440,9 +440,17 @@ form .form-group select {
 
     form .form-group label {
         font-size: 0.9rem;
+
+
+    }
+
+    .form-group {
+        max-width: 80%;
     }
 
     .choose-tech {
         font-size: 0.9rem;
+        max-width: 80%;
     }
+
 }

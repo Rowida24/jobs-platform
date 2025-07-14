@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>حجوزات العملاء - مقدم خدمة</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="../css/bookings_provider.css" />
+  <link rel="icon" type="image/png" href="../img/img/handlogo-removebg-preview.png" />
+</head>
+
+
+
+<body>
+
+  <header class="main-header">
+    <div class="logo">
+      <img src="../img/img/لوقو22.png" alt="شعار المنصة" />
+      <span class="brand-name">منصة خبرة</span>
+    </div>
+
+    <nav class="main-nav">
+      <a href="homepage.html">الرئيسية</a>
+      <a href="services.html">خداماتنا</a>
+      <a href="login.html">سجل الأن</a>
+      <a href="qustions.html"> الأسئلة الشائعة</a>
+      <a href="contact.html"> تواصل معنا</a>
+    </nav>
+
+    <form class="search-box" action="#">
+      <input type="search" placeholder="ابحث…" />
+      <button type="submit"><i class="fa fa-search"></i></button>
+    </form>
+
+    <button id="burger"><i class="fa fa-bars"></i></button>
+  </header>
+
+  <!-- ========== القائمة الجانبية ========== -->
+  <aside id="side-menu">
+    <button id="close-menu"><i class="fa fa-xmark"></i></button>
+    <ul>
+      <li><a href="account.html">حسابك</a></li>
+      <li><a href="notification.html">إشعارات </a></li>
+      <li><a href="support.html">شكاوي والدعم </a></li>
+      <li><a href="policy.html">سياسة الأستخدام </a></li>
+      <li><a href="homepage.html">تسجيل الخروج</a></li>
+    </ul>
+  </aside>
+
+
+
+
+
+
+
+
+  <main class="booking-container">
+    <h2>طلبات العملاء</h2>
+    <table class="booking-table">
+      <thead>
+        <tr>
+          <th>اسم العميل</th>
+          <th>الخدمة المطلوبة</th>
+          <th>تاريخ الحجز</th>
+          <th>ملاحظات</th>
+          <th>إجراء</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>سارة مصطفى</td>
+          <td>حشو</td>
+          <td>2025-07-13</td>
+          <td> حشو الضرس الخلفي </td>
+          <td><button class="accept-btn">تأكيد</button></td>
+        </tr>
+        <tr>
+          <td>منار محمد</td>
+          <td>علاج عصب</td>
+          <td>2025-08-13</td>
+          <td>مراجعة </td>
+          <td><button class="accept-btn">تأكيد</button></td>
+        </tr>
+        <tr>
+          <td>محمود ايمن</td>
+          <td>تقويم</td>
+          <td>2025-07-16</td>
+          <td> خلع سن قبل التقويم </td>
+          <td><button class="accept-btn">تأكيد</button></td>
+        </tr>
+        <!-- مزيد من الصفوف -->
+      </tbody>
+    </table>
+  </main>
+
+
+
+  <script>
+    const burger = document.getElementById('burger');
+    const sideMenu = document.getElementById('side-menu');
+    const closeMenu = document.getElementById('close-menu');
+
+    burger.onclick = () => sideMenu.classList.add('open');
+    closeMenu.onclick = () => sideMenu.classList.remove('open');
+  </script>
+
+
+  <script>
+    const sideMenuList = document.querySelector('#side-menu ul');
+    const userType = localStorage.getItem('userType');
+
+    if (userType === 'client') {
+      const li = document.createElement('li');
+      li.innerHTML = '<a href="bookings_client.html">حجوزاتي</a>';
+      sideMenuList.insertBefore(li, sideMenuList.children[1]); // بعد "حسابك"
+    } else if (userType === 'provider') {
+      const li = document.createElement('li');
+      li.innerHTML = '<a href="bookings_provider.html">حجوزاتي</a>';
+      sideMenuList.insertBefore(li, sideMenuList.children[1]); // بعد "حسابك"
+    }
+  </script>
+
+
+
+</body>
+
+</html>

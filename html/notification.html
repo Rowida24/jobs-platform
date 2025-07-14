@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>منصة فنيّي الصيانة</title>
+
+    <!-- أيقونات Font Awesome للبرغر وأزرار السوشيال -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+    <!-- ملف التنسيق الخارجي -->
+    <link rel="stylesheet" href="../css/notification.css" />
+    <link rel="icon" type="image/png" href="../img/img/handlogo-removebg-preview.png" />
+</head>
+
+
+<body>
+
+    <!-- ========== الشريط العلوي ========== -->
+    <header class="main-header">
+        <div class="logo">
+            <img src="../img/img/لوقو22.png" alt=" شعار المنصة" />
+            <span class="brand-name">منصة خبرة</span>
+        </div>
+
+        <!-- عناصر التنقّل (يمكن ربط كلّ عنصر ‏href‏ بصفحة لاحقاً) -->
+        <nav class="main-nav">
+            <a href="homepage.html">الرئيسية</a>
+            <a href="services.html">خداماتنا</a>
+            <a href="login.html">سجل الأن</a>
+            <a href="qustions.html"> الأسئلة الشائعة</a>
+            <a href="contact.html"> تواصل معنا</a>
+        </nav>
+
+        <!-- مربع البحث -->
+        <form class="search-box" action="#">
+            <input type="search" placeholder="ابحث عن فني أو خدمة…" />
+            <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+        </form>
+
+        <!-- أيقونة البرغر للقائمة الجانبية -->
+        <button id="burger" aria-label="القائمة">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+    </header>
+
+    <!-- ========== القائمة الجانبية ========== -->
+    <aside id="side-menu">
+        <button id="close-menu" aria-label="إغلاق"><i class="fa-solid fa-xmark"></i></button>
+        <ul>
+            <li><a href="account.html">حسابك</a></li>
+            <li><a href="notification.html">إشعارات </a></li>
+            <li><a href="support.html">شكاوي والدعم </a></li>
+            <li><a href="policy.html">سياسة الأستخدام </a></li>
+            <li><a href="homepage.html">تسجيل الخروج</a></li>
+    </aside>
+    <section class="notifications-section">
+        <h2 class="section-title">📩 الإشعارات</h2>
+
+        <div class="notifications-group">
+            <h3 class="group-title">الجديدة</h3>
+
+            <div class="notification-box new">
+                <i class="fas fa-bell"></i>
+                <div class="notification-content">
+                    <p>تم تأكيد موعد الزيارة مع الفني.</p>
+                    <span class="date-bubble">5 يوليو 2025</span>
+                </div>
+            </div>
+
+            <div class="notification-box new">
+                <i class="fas fa-check-circle"></i>
+                <div class="notification-content">
+                    <p>تم تفعيل حسابك بنجاح!</p>
+                    <span class="date-bubble">4 يوليو 2025</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="notifications-group">
+            <h3 class="group-title">المقروءة</h3>
+
+            <div class="notification-box read">
+                <i class="fas fa-info-circle"></i>
+                <div class="notification-content">
+                    <p>تم تحديث سياسة الخصوصية.</p>
+                    <span class="date-bubble">1 يوليو 2025</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="notifications-group">
+            <h3 class="group-title">القديمة</h3>
+
+            <div class="notification-box old">
+                <i class="fas fa-archive"></i>
+                <div class="notification-content">
+                    <p>طلبك رقم #122 تم إغلاقه بنجاح.</p>
+                    <span class="date-bubble">25 يونيو 2025</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ============ Footer ============ -->
+    <footer class="cloud-footer">
+        <div class="cloud-shape"></div>
+
+        <div class="cloud-content">
+            <div class="footer-brand">
+                <img src="../img/img/لوقو22.png" alt="لوقو" />
+                <span>خبرة</span>
+                <p>"كل ماتحتاجه من خدمات..... في مكان واحد"</p>
+            </div>
+
+
+
+            <div class="login-now">
+                <p>سجل الأن للاستفادة من خدمات المنصة</p>
+                <a href="login.html">سجل الأن</a>
+            </div>
+
+            <div class="social-icons">
+                <a href="https://www.facebook.com" target="_blank"><img src="../img/img/فيسبوك3.png"></a>
+                <a href="https://www.instagram.com" target="_blank"><img src="../img/img/انستغرام 3.png "></a>
+                <a href="https://accounts.snapchat.com" target="_blank"><img src="../img/img/سناب شات 3.png"></a>
+            </div>
+
+            <p class="footer-copy">© 2025 جميع الحقوق محفوظة لمنصة <strong>خبرة</strong></p>
+        </div>
+    </footer>
+
+    <!-- ========== سكريبت صغير لفتح/إغلاق القائمة الجانبية ========== -->
+    <script>
+        const burger = document.getElementById('burger');
+        const sideMenu = document.getElementById('side-menu');
+        const closeMenu = document.getElementById('close-menu');
+
+        burger.onclick = () => sideMenu.classList.add('open');
+        closeMenu.onclick = () => sideMenu.classList.remove('open');
+    </script>
+
+
+    <script>
+        const sideMenuList = document.querySelector('#side-menu ul');
+        const userType = localStorage.getItem('userType');
+
+        if (userType === 'client') {
+            const li = document.createElement('li');
+            li.innerHTML = '<a href="bookings_client.html">حجوزاتي</a>';
+            sideMenuList.insertBefore(li, sideMenuList.children[1]); // بعد "حسابك"
+        } else if (userType === 'provider') {
+            const li = document.createElement('li');
+            li.innerHTML = '<a href="bookings_provider.html">حجوزاتي</a>';
+            sideMenuList.insertBefore(li, sideMenuList.children[1]); // بعد "حسابك"
+        }
+    </script>
+
+</body>
+
+</html>

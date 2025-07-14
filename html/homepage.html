@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>منصة خبرة</title>
+
+    <!-- أيقونات Font Awesome للبرغر وأزرار السوشيال -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Kufi+Arabic&display=swap" rel="stylesheet">
+    <!-- ملف التنسيق الخارجي -->
+    <link rel="stylesheet" href="../css/homepage.css" />
+    <link rel="icon" type="image/png" href="../img/img/handlogo-removebg-preview.png" />
+</head>
+
+
+<body>
+
+    <!-- ========== الشريط العلوي ========== -->
+    <header class="main-header">
+        <div class="logo">
+            <img src="../img/img/لوقو22.png" alt="شعار المنصة" />
+            <span class="brand-name">منصة خبرة</span>
+        </div>
+
+        <!-- عناصر التنقّل (يمكن ربط كلّ عنصر ‏href‏ بصفحة لاحقاً) -->
+        <nav class="main-nav">
+            <a href="homepage.html">الرئيسية</a>
+            <a href="services.html">خدماتنا</a>
+            <a href="login.html">سجل الأن</a>
+            <a href="qustions.html"> الأسئلة الشائعة</a>
+            <a href="contact.html"> تواصل معنا</a>
+        </nav>
+
+        <!-- مربع البحث -->
+        <form class="search-box" action="#">
+            <input type="search" placeholder="ابحث عن فني أو خدمة…" />
+            <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+        </form>
+
+        <!-- أيقونة البرغر للقائمة الجانبية -->
+        <button id="burger" aria-label="القائمة">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+    </header>
+
+    <!-- ========== القائمة الجانبية ========== -->
+    <aside id="side-menu">
+        <button id="close-menu" aria-label="إغلاق"><i class="fa-solid fa-xmark"></i></button>
+        <ul>
+            <li><a href="account.html">حسابك</a></li>
+            <li><a href="notification.html">إشعارات </a></li>
+            <li><a href="support.html">شكاوي والدعم </a></li>
+            <li><a href="policy.html">سياسة الأستخدام </a></li>
+            <li><a href="homepage.html">تسجيل الخروج</a></li>
+    </aside>
+
+    <!-- ========== بطل الصفحة ========== -->
+    <section class="hero">
+        <img src="../img/img/hand4.jpg" class="hero-image">
+        <div class="hero-content">
+            <h1>منصة خبرة</h1>
+            <span> هل أنت مهني محترف تبحث عن منصة تُظهر مهاراتك وتوصلك بالعملاء بسهولة؟
+                أم عميل تحتاج إلى خدمة موثوقة، سريعة، واحترافية في أي وقت؟ </span>
+            <p> "خبرة" هي منصتك الذكية التي تجمع بين مقدمي الخدمات والعملاء في بيئة آمنة واحترافية، تضمن لك الجودة
+                والتواصل السريع – كل ذلك بضغطة زر</p>
+        </div>
+    </section>
+
+    <!-- ========== لقطات من داخل المنصة ========== -->
+    <section id="platform-tour">
+        <h2 class="section-title">جولة داخل المنصة</h2>
+        <div class="video-gallery">
+            <div class="video-card">
+                <video src="../videos/contact.mp4" controls muted autoplay loop></video>
+                <p class=" video-caption">يمكنك التواصل مع فريقنا عبر شاشة تواصل معنا </p>
+            </div>
+            <div class="video-card">
+                <video src="../videos/services.mp4" controls muted autoplay loop></video>
+                <p class=" video-caption">اختر مجال طلبك عبر شاشة خدماتنا واحجز</p>
+            </div>
+            <div class="video-card">
+                <video src="../videos/nontification.mp4" controls muted autoplay loop></video>
+                <p class="video-caption">شاشة إشعارات لمعرفة اي جديد داخل المنصة</p>
+            </div>
+
+
+        </div>
+    </section>
+
+    <!-- ========== كيف تطلب فني ========== -->
+    <section class="how-it-works">
+        <h2 class="section-title">كيف تطلب من المنصة</h2>
+
+        <div class="steps">
+            <div class="step">
+                <span class="badge">1</span>
+                <h3>حدد خدمتك</h3>
+                <img src="../img/img/choose-service.png" alt="اختر خدمتك" />
+            </div>
+
+            <div class="step">
+                <span class="badge">2</span>
+                <h3>اختر من يناسبك</h3>
+                <img src="../img/img/choose.png" alt=" اختر الفني" />
+            </div>
+
+            <div class="step">
+                <span class="badge">3</span>
+                <h3>حدد موقعك واحجز</h3>
+                <img src="../img/img/موقع.png" alt=" حدد موقعك واحجز" />
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== لماذا منصتنا ========== -->
+    <section id="why" class="why-us">
+        <h2 class="section-title">لماذا منصتنا؟</h2>
+        <div class="why-wrapper">
+            <ul class="features right">
+                <li><i class="fa-solid fa-circle-check"></i> كل الخدمات عندنا</li>
+                <li><i class="fa-solid fa-circle-check"></i> 24/7 خدمتنا فورية</li>
+                <li><i class="fa-solid fa-circle-check"></i> عملاء يدعمون طلبك</li>
+            </ul>
+
+            <img class="center-image" src="../img//img/logo00.png" alt="صورة توضيحية">
+
+            <ul class="features left">
+                <li><i class="fa-solid fa-circle-check"></i>نضمن لك الجودة والسعر</li>
+                <li><i class="fa-solid fa-circle-check"></i> تتبّع الطلب</li>
+                <li><i class="fa-solid fa-circle-check"></i> تقييمات موثوقة</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- ============ Footer ============ -->
+    <footer class="cloud-footer">
+        <div class="cloud-shape"></div>
+
+        <div class="cloud-content">
+            <div class="footer-brand">
+                <img src="../img/img/لوقو22.png" alt="لوقو" />
+                <span>خبرة</span>
+                <p>"كل ماتحتاجه من خدمات..... في مكان واحد"</p>
+            </div>
+
+
+
+            <div class="login-now">
+                <p>سجل الأن للاستفادة من خدمات المنصة</p>
+                <a href="login.html">سجل الأن</a>
+            </div>
+
+            <div class="social-icons">
+                <a href="https://www.facebook.com" target="_blank"><img src="../img/img/فيسبوك3.png"></a>
+                <a href="https://www.instagram.com" target="_blank"><img src="../img/img/انستغرام 3.png "></a>
+                <a href="https://accounts.snapchat.com" target="_blank"><img src="../img/img/سناب شات 3.png"></a>
+            </div>
+
+            <p class="footer-copy">© 2025 جميع الحقوق محفوظة لمنصة <strong>خبرة</strong></p>
+        </div>
+    </footer>
+
+
+    <!-- ========== سكريبت صغير لفتح/إغلاق القائمة الجانبية ========== -->
+    <script>
+        const burger = document.getElementById('burger');
+        const sideMenu = document.getElementById('side-menu');
+        const closeMenu = document.getElementById('close-menu');
+
+        burger.onclick = () => sideMenu.classList.add('open');
+        closeMenu.onclick = () => sideMenu.classList.remove('open');
+    </script>
+
+
+    <script>
+        const sideMenuList = document.querySelector('#side-menu ul');
+        const userType = localStorage.getItem('userType');
+
+        if (userType === 'client') {
+            const li = document.createElement('li');
+            li.innerHTML = '<a href="bookings_client.html">حجوزاتي</a>';
+            sideMenuList.insertBefore(li, sideMenuList.children[1]); // بعد "حسابك"
+        } else if (userType === 'provider') {
+            const li = document.createElement('li');
+            li.innerHTML = '<a href="bookings_provider.html">حجوزاتي</a>';
+            sideMenuList.insertBefore(li, sideMenuList.children[1]); // بعد "حسابك"
+        }
+    </script>
+
+
+
+
+
+</body>
+
+</html>

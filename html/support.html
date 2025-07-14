@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>الشكاوى والدعم</title>
+    <link rel="stylesheet" href="../css/support.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="icon" type="image/png" href="../img/img/handlogo-removebg-preview.png" />
+</head>
+
+<body>
+
+
+    <!-- ========== Header ========== -->
+    <header class="main-header">
+        <div class="logo">
+            <img src="../img/img/لوقو22.png" alt="شعار المنصة" />
+            <span class="brand-name">منصة خبرة</span>
+        </div>
+
+        <nav class="main-nav">
+            <a href="homepage.html">الرئيسية</a>
+            <a href="services.html">خداماتنا</a>
+            <a href="login.html">سجل الأن</a>
+            <a href="qustions.html"> الأسئلة الشائعة</a>
+            <a href="contact.html"> تواصل معنا</a>
+        </nav>
+
+        <form class="search-box">
+            <input type="search" placeholder="ابحث عن فني أو خدمة…" />
+            <button type="submit"><i class="fa fa-search"></i></button>
+        </form>
+
+        <button id="burger"><i class="fa-solid fa-bars"></i></button>
+    </header>
+
+    <!-- ========== القائمة الجانبية ========== -->
+    <aside id="side-menu">
+        <button id="close-menu" aria-label="إغلاق"><i class="fa-solid fa-xmark"></i></button>
+        <ul>
+            <li><a href="account.html">حسابك</a></li>
+            <li><a href="notification.html">إشعارات </a></li>
+            <li><a href="support.html">شكاوي والدعم </a></li>
+            <li><a href="policy.html">سياسة الأستخدام </a></li>
+            <li><a href="homepage.html">تسجيل الخروج</a></li>
+        </ul>
+    </aside>
+
+    <!-- ========== Complaint Form ========== -->
+    <section class="complaint-section">
+        <div class="complaint-box">
+            <div class="complaint-header">
+                <div class="title">
+                    <h2>أرسل شكوتك</h2>
+                    <p>نحن هنا لمساعدتك ! يمكنك إرسال شكوى عن أي مشكلة تواجهك.</p>
+                </div>
+                <img src="../img/img/support-img.png" alt="أيقونة الدعم">
+
+            </div>
+
+            <form class="complaint-form">
+                <input type="text" placeholder="الاسم الكامل" required>
+                <input type="email" placeholder="البريد الإلكتروني" required>
+                <input type="text" placeholder="عنوان الشكوى" required>
+                <textarea rows="5" placeholder="تفاصيل الشكوى..." required></textarea>
+                <button type="submit">إرسال</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- ============ Footer ============ -->
+    <footer class="cloud-footer">
+        <div class="cloud-shape"></div>
+
+        <div class="cloud-content">
+            <div class="footer-brand">
+                <img src="../img/img/لوقو22.png" alt="لوقو" />
+                <span>خبرة</span>
+                <p>"كل ماتحتاجه من خدمات..... في مكان واحد"</p>
+            </div>
+
+
+
+            <div class="login-now">
+                <p>سجل الأن للاستفادة من خدمات المنصة</p>
+                <a href="login.html">سجل الأن</a>
+            </div>
+
+            <div class="social-icons">
+                <a href="https://www.facebook.com" target="_blank"><img src="../img/img/فيسبوك3.png"></a>
+                <a href="https://www.instagram.com" target="_blank"><img src="../img/img/انستغرام 3.png "></a>
+                <a href="https://accounts.snapchat.com" target="_blank"><img src="../img/img/سناب شات 3.png"></a>
+            </div>
+
+            <p class="footer-copy">© 2025 جميع الحقوق محفوظة لمنصة <strong>خبرة</strong></p>
+        </div>
+    </footer>
+
+
+    <script>
+        const burger = document.getElementById('burger');
+        const sideMenu = document.getElementById('side-menu');
+        const closeMenu = document.getElementById('close-menu');
+
+        burger.onclick = () => sideMenu.classList.add('open');
+        closeMenu.onclick = () => sideMenu.classList.remove('open');
+    </script>
+
+
+    <script>
+        const sideMenuList = document.querySelector('#side-menu ul');
+        const userType = localStorage.getItem('userType');
+
+        if (userType === 'client') {
+            const li = document.createElement('li');
+            li.innerHTML = '<a href="bookings_client.html">حجوزاتي</a>';
+            sideMenuList.insertBefore(li, sideMenuList.children[1]); // بعد "حسابك"
+        } else if (userType === 'provider') {
+            const li = document.createElement('li');
+            li.innerHTML = '<a href="bookings_provider.html">حجوزاتي</a>';
+            sideMenuList.insertBefore(li, sideMenuList.children[1]); // بعد "حسابك"
+        }
+    </script>
+
+</body>
+
+</html>

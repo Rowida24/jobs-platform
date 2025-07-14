@@ -59,7 +59,7 @@ a {
 
 body {
     background-image: url("../img/img/background.jpg");
-    font-family: "Tajawal", sans-serif;
+    font-family: "Katibeh", sans-serif;
     direction: rtl;
     margin: 0;
     padding: 0;
@@ -244,11 +244,12 @@ main {
     margin: 40px auto;
 }
 
-.services h1 {
+.services h2 {
     margin-bottom: 30px;
-    color: rgba(29, 60, 108, 0.9);
+    color: #763a6d;
     font-weight: bold;
-    font: 2rem sans-serif;
+    font-family: 'Katibeh', 'sans-serif';
+    font-size: 3rem;
 }
 
 form {
@@ -359,7 +360,7 @@ form {
     /* وردي وسمائي */
     color: white;
     padding-top: 70px;
-    font-family: 'Tajawal', sans-serif;
+    font-family: '', sans-serif;
     overflow: hidden;
     text-align: center;
 }

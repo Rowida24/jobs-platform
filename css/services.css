@@ -338,7 +338,7 @@ form {
 }
 
 .dropdown li:hover {
-    background: #da7b2db0;
+    background: var(--bright-pink);
 }
 
 .dropdown .show-all {

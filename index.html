@@ -8,8 +8,8 @@
 
     <!-- أيقونات Font Awesome للبرغر وأزرار السوشيال -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Kufi+Arabic&display=swap" rel="stylesheet">
-    <!-- ملف التنسيق الخارجي -->
+    <!--    <link href="https://fonts.googleapis.com/css2?family=Noto+Kufi+Arabic&display=swap" rel="stylesheet">
+   ملف التنسيق الخارجي -->
     <link rel="stylesheet" href="css/homepage.css" />
     <link rel="icon" type="image/png" href="img/img/handlogo-removebg-preview.png" />
 </head>
@@ -49,10 +49,12 @@
         <button id="close-menu" aria-label="إغلاق"><i class="fa-solid fa-xmark"></i></button>
         <ul>
             <li><a href="html/account.html">حسابك</a></li>
+            <li><a href="html/bookings_provider.html">حجوزاتي</a></li>
             <li><a href="html/notification.html">إشعارات </a></li>
             <li><a href="html/support.html">شكاوي والدعم </a></li>
             <li><a href="html/policy.html">سياسة الأستخدام </a></li>
-            <li><a href="index.html">تسجيل الخروج</a></li>
+            <li><a href="../index.html">تسجيل الخروج</a></li>
+        </ul>
     </aside>
 
     <!-- ========== بطل الصفحة ========== -->
@@ -62,7 +64,8 @@
             <h1>منصة خبرة</h1>
             <span> هل أنت مهني محترف تبحث عن منصة تُظهر مهاراتك وتوصلك بالعملاء بسهولة؟
                 أم عميل تحتاج إلى خدمة موثوقة، سريعة، واحترافية في أي وقت؟ </span>
-            <p> "خبرة" هي منصتك الذكية التي تجمع بين مقدمي الخدمات والعملاء في بيئة آمنة واحترافية، تضمن لك الجودة
+            <p> "خبرة" هي منصتك الذكية التي تجمع بين مقدمي الخدمات والعملاء في بيئة آمنة واحترافية، تضمن لك
+                الجودة
                 والتواصل السريع – كل ذلك بضغطة زر</p>
         </div>
     </section>
@@ -161,26 +164,13 @@
     <script>
         const burger = document.getElementById('burger');
         const sideMenu = document.getElementById('side-menu');
-        const closeMenu = document.getElementById('close-menu');
 
         burger.onclick = () => sideMenu.classList.add('open');
         closeMenu.onclick = () => sideMenu.classList.remove('open');
     </script>
 
-    <script>
-        const sideMenuList = document.querySelector('#side-menu ul');
-        const userType = localStorage.getItem('userType');
 
-        if (userType === 'client') {
-            const li = document.createElement('li');
-            li.innerHTML = '<a href="bookings_client.html">حجوزاتي</a>';
-            sideMenuList.insertBefore(li, sideMenuList.children[1]); // بعد "حسابك"
-        } else if (userType === 'provider') {
-            const li = document.createElement('li');
-            li.innerHTML = '<a href="bookings_provider.html">حجوزاتي</a>';
-            sideMenuList.insertBefore(li, sideMenuList.children[1]); // بعد "حسابك"
-        }
-    </script>
+
 </body>
 
 </html>

@@ -76,7 +76,7 @@
                         <input type="file" id="id-photo">
                     </div>
 
-                    <a href="../index.html" class="choose-tech">تسجيل </a>
+                    <button type="button" class="choose-tech" onclick="registerClient()">تسجيل</button>
             </div>
         </section>
     </main>
@@ -104,7 +104,18 @@
             const li = document.createElement('li');
             li.innerHTML = '<a href="bookings_provider.html">حجوزاتي</a>';
             sideMenuList.insertBefore(li, sideMenuList.children[1]); // بعد "حسابك"
+        }    </script>
+
+    <script>
+        function registerClient() {
+            // حفظ حالة تسجيل الدخول ونوع المستخدم
+            localStorage.setItem('isLoggedIn', 'true');
+            localStorage.setItem('userType', 'client');
+
+            // إعادة التوجيه للصفحة الرئيسية
+            window.location.href = '../index.html';
         }
+
     </script>
 
 </body>
